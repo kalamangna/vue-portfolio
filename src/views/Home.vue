@@ -1,0 +1,270 @@
+<template>
+  <div class="text-grey">
+    <div class="bg-blackier px-4 py-10 md:px-40 md:py-20">
+      <!-- banner -->
+      <div class="font-nunito">
+        <h1 class="text-5xl font-bold mb-2 tracking-wide">
+          Hello.
+        </h1>
+        <div class="flex items-center">
+          <hr class="w-10 mr-5" />
+          <p class="text-2xl tracking-wide">I'm Abed.</p>
+        </div>
+      </div>
+      <!-- end banner -->
+
+      <!-- card -->
+      <div class="bg-blacky mt-10 md:mt-20 p-5 md:p-10 rounded shadow lg:flex">
+        <!-- about -->
+        <div class="lg:w-1/2">
+          <h1 class="font-nunito font-bold text-3xl tracking-wide">
+            About
+          </h1>
+          <hr class="w-10 mt-3 mb-6" />
+          <p class="lg:pr-14">
+            My name is
+            <span class="font-bold">Abd Dzuljalali Wal Ikram.</span> I'm a
+            Frontend Developer (especially Vue.js) based in Makassar, Indonesia.
+            With more than 1 year professional experience in website
+            development, I have acquired the skills necessary to build great and
+            premium websites. Maybe I don't need an inspirational quote, I just
+            need a coffee.
+          </p>
+        </div>
+        <!-- end about -->
+
+        <!-- skills -->
+        <div class="lg:w-1/2 mt-8 lg:mt-0">
+          <h1 class="font-nunito font-bold text-3xl tracking-wide">
+            Skills
+          </h1>
+          <hr class="w-10 mt-3 mb-6" />
+          <div class="flex">
+            <div class="w-1/2">
+              <div
+                class="flex items-center pb-1 last:pb-0"
+                v-for="skill in skills.slice(0, 5)"
+                :key="skill.text"
+              >
+                <div class="w-2 h-2 mr-3 rounded bg-grey"></div>
+                <p>{{ skill.text }}</p>
+              </div>
+            </div>
+            <div class="w-1/2">
+              <div
+                class="flex items-center pb-1 last:pb-0"
+                v-for="skill in skills.slice(5, 10)"
+                :key="skill.text"
+              >
+                <div class="w-2 h-2 mr-3 rounded bg-grey"></div>
+                <p>{{ skill.text }}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- end skills -->
+      </div>
+    </div>
+    <!-- end card -->
+
+    <!-- goto button -->
+    <div class="h-10 bg-blackier">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 20 20"
+        fill="currentColor"
+        class="h-10 mx-auto animate-bounce cursor-pointer"
+        v-scroll-to="'#works'"
+      >
+        <path
+          fill-rule="evenodd"
+          d="M15.707 4.293a1 1 0 010 1.414l-5 5a1 1 0 01-1.414 0l-5-5a1 1 0 011.414-1.414L10 8.586l4.293-4.293a1 1 0 011.414 0zm0 6a1 1 0 010 1.414l-5 5a1 1 0 01-1.414 0l-5-5a1 1 0 111.414-1.414L10 14.586l4.293-4.293a1 1 0 011.414 0z"
+          clip-rule="evenodd"
+        />
+      </svg>
+    </div>
+    <!-- end goto button -->
+
+    <!-- works -->
+    <div
+      class="bg-blackier px-4 py-10 md:px-40 md:py-20 text-center"
+      id="works"
+    >
+      <h1 class="font-nunito font-bold text-3xl tracking-wide">
+        Works
+      </h1>
+      <hr class="w-10 mt-3 mb-10 mx-auto" />
+      <div class="lg:flex lg:justify-between">
+        <div
+          v-for="(work, i) in works"
+          :key="i"
+          class="w-full lg:w-80 h-auto mb-8 last:mb-0"
+        >
+          <div class="bg-blacky p-4 h-80 w-full rounded shadow">
+            <img
+              v-if="i < 2"
+              class="h-full w-full object-cover object-top rounded"
+              :src="work.img"
+              alt="portfolio"
+            />
+            <div
+              v-else
+              class="flex justify-center items-center h-full w-full font-bold text-2xl"
+            >
+              You are here
+            </div>
+          </div>
+          <h1 class="text-lg font-semibold mt-3">{{ work.title }}</h1>
+          <p class="mb-5">{{ work.detail }}</p>
+          <a
+            v-if="i < 2"
+            :href="work.link"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="text-grey text-sm px-3 py-1 shadow rounded border border-grey font-nunito font-bold tracking-wide hover:bg-grey hover:text-blackier"
+          >
+            SEE LIVE
+          </a>
+        </div>
+      </div>
+    </div>
+    <!-- end works -->
+
+    <!-- contact -->
+    <div
+      class="bg-blacky px-4 py-10 md:px-40 md:py-20 text-center"
+      id="contact"
+    >
+      <h1 class="font-nunito font-bold text-3xl tracking-wide">
+        Contact
+      </h1>
+      <hr class="w-10 mt-3 mb-10 mx-auto" />
+      <div class="inline-block">
+        <a
+          v-for="contact in contacts"
+          :key="contact.text"
+          :href="contact.link"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="hover:text-greier flex justify-center items-center py-2"
+        >
+          <img :src="contact.icon" alt="contact" class="w-6 h-6 mr-3" />
+          {{ contact.text }}
+        </a>
+      </div>
+    </div>
+    <!-- end contact -->
+  </div>
+</template>
+
+<script>
+export default {
+  name: "Home",
+  data() {
+    return {
+      skills: [
+        {
+          text: "Vue.js",
+        },
+        {
+          text: "Nuxt.js",
+        },
+        {
+          text: "HTML",
+        },
+        {
+          text: "CSS",
+        },
+        {
+          text: "SCSS",
+        },
+        {
+          text: "Javascript",
+        },
+        {
+          text: "Responsive Web",
+        },
+        {
+          text: "Bootstrap",
+        },
+        {
+          text: "Vuetify",
+        },
+        {
+          text: "Tailwind CSS",
+        },
+      ],
+      contacts: [
+        {
+          icon: require("@/assets/icon/gmail.svg"),
+          text: "kalamangna@gmail.com",
+          link: "mailto:kalamangna@gmail.com",
+        },
+        {
+          icon: require("@/assets/icon/whatsapp.svg"),
+          text: "+62 82188344982",
+          link: "https://wa.me/6282188344982",
+        },
+        {
+          icon: require("@/assets/icon/linkedin.svg"),
+          text: "Abd Dzuljalali Wal Ikram",
+          link: "https://linkedin.com/in/kalamangna",
+        },
+      ],
+      works: [
+        {
+          img: require("@/assets/img/travling.png"),
+          title: "Travling Landing Page",
+          detail: "Nuxt.js + Vuetify",
+          link: "https://travling.id",
+        },
+        {
+          img: require("@/assets/img/ekspose.png"),
+          title: "Ekspose Sulsel News",
+          detail: "Nuxt.js + Vuetify",
+          link: "https://ekspose-sulsel.herokuapp.com",
+        },
+        {
+          img: require("@/assets/img/travling.png"),
+          title: "Portfolio Website",
+          detail: "Vue.js + Tailwind CSS",
+          link: "https://kalamangna.000webhostapp.com",
+        },
+      ],
+    };
+  },
+  metaInfo: {
+    title: "Abd Dzuljalali Wal Ikram | Portfolio",
+    // override the parent template and just use the above title only
+    titleTemplate: null,
+    meta: [
+      {
+        name: "description",
+        content:
+          "Hello! My name is Abd. Dzuljalali Wal Ikram. I'm a Frontend Developer (especially Vue.js) based in Makassar, Indonesia. With more than 1 year professional experience in website development, I have acquired the skills necessary to build great and premium websites. Maybe I don't need an inspirational quote, I just need a coffee.",
+      },
+      {
+        property: "og:title",
+        content: "Abd Dzuljalali Wal Ikram - Portfolio",
+      },
+      {
+        property: "og:description",
+        content:
+          "Hello! My name is Abd. Dzuljalali Wal Ikram. I'm a Frontend Developer (especially Vue.js) based in Makassar, Indonesia. With more than 1 year professional experience in website development, I have acquired the skills necessary to build great and premium websites. Maybe I don't need an inspirational quote, I just need a coffee.",
+      },
+      {
+        property: "og:url",
+        content: "https://kalamangna.000webhostapp.com",
+      },
+      {
+        property: "og:type",
+        content: "website",
+      },
+      {
+        property: "og:image",
+        content: "https://kalamangna.000webhostapp.com/abed.jpg",
+      },
+    ],
+  },
+};
+</script>
