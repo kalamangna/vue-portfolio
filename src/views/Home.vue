@@ -254,7 +254,7 @@ export default {
       },
       {
         property: "og:url",
-        content: "https://kalamangna.000webhostapp.com",
+        content: "https://kalamangna.github.io",
       },
       {
         property: "og:type",
@@ -262,7 +262,7 @@ export default {
       },
       {
         property: "og:image",
-        content: "https://kalamangna.000webhostapp.com/abed.jpg",
+        content: "https://kalamangna.github.io/abed.jpg",
       },
     ],
   },
