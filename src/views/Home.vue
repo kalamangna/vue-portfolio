@@ -1,5 +1,5 @@
 <template>
-  <div class="text-grey">
+  <div class="text-grey" style="padding-top: 62px">
     <div class="bg-blackier px-4 py-10 md:px-40 md:py-20">
       <!-- banner -->
       <div class="font-nunito">
@@ -121,7 +121,7 @@
             :href="work.link"
             target="_blank"
             rel="noopener noreferrer"
-            class="text-grey text-sm px-3 py-1 shadow rounded border border-grey font-nunito font-bold tracking-wide hover:bg-grey hover:text-blackier"
+            class="text-grey text-sm px-3 py-1 shadow rounded border border-grey font-nunito font-bold tracking-wide lg:hover:bg-grey lg:hover:text-blackier"
           >
             SEE LIVE
           </a>

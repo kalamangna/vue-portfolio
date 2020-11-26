@@ -2,14 +2,14 @@
   <div id="app">
     <!-- navbar -->
     <nav
-      class="bg-blacky shadow font-nunito text-grey p-4 flex justify-between items-center"
+      class="bg-blacky shadow font-nunito text-grey p-4 flex justify-between items-center fixed w-full z-50"
     >
-      <div class="font-bold">
+      <div class="font-bold cursor-pointer" v-scroll-to="'#app'">
         ABED
       </div>
       <div>
         <button
-          class="px-3 py-1 text-grey border border-grey text-sm rounded font-bold hover:bg-grey hover:text-blacky focus:outline-none tracking-wide"
+          class="px-3 py-1 text-grey border border-grey text-sm rounded font-bold lg:hover:bg-grey lg:hover:text-blacky focus:outline-none tracking-wide"
           v-scroll-to="'#contact'"
         >
           HIRE ME
