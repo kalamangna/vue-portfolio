@@ -1,9 +1,6 @@
 <template>
   <div class="text-grey">
     <div class="bg-blackier px-4 py-10 md:px-40 md:py-20">
-      <div class="text-center text-5xl">
-        test deploy
-      </div>
       <!-- banner -->
       <div class="font-nunito">
         <h1 class="text-5xl font-bold mb-2 tracking-wide">
