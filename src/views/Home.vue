@@ -74,7 +74,7 @@
         viewBox="0 0 20 20"
         fill="currentColor"
         class="h-10 mx-auto animate-bounce cursor-pointer"
-        v-scroll-to="'#works'"
+        v-scroll-to="{ el: '#works', offset: -50 }"
       >
         <path
           fill-rule="evenodd"
@@ -262,28 +262,19 @@ export default {
       },
       {
         property: "og:image",
-        content: "https://kalamangna.github.io/abed.jpg",
+        content: "https://kalamangna.github.io/abed.png",
       },
       {
-        property: "twitter:card",
-        content: "summary_large_image",
+        name: "twitter:card",
+        content: "summary",
       },
       {
-        property: "twitter:url",
-        content: "https://kalamangna.github.io/",
+        name: "twitter:site",
+        content: "@kalamangna",
       },
       {
-        property: "twitter:title",
-        content: "Abd Dzuljalali Wal Ikram | Portfolio",
-      },
-      {
-        property: "twitter:description",
-        content:
-          "Hello! My name is Abd. Dzuljalali Wal Ikram. I'm a Frontend Developer (especially Vue.js) based in Makassar, Indonesia. With more than 1 year professional experience in website development, I have acquired the skills necessary to build great and premium websites. Maybe I don't need an inspirational quote, I just need a coffee.",
-      },
-      {
-        property: "twitter:image",
-        content: "https://kalamangna.github.io/abed.jpg",
+        name: "twitter:creator",
+        content: "@kalamangna",
       },
     ],
   },
