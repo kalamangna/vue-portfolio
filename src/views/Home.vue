@@ -152,6 +152,14 @@
           {{ contact.text }}
         </a>
       </div>
+      <a
+        href="https://kalamangna.github.io/Resume - Abd. Dzuljalali Wal Ikram.pdf"
+        download
+        rel="noopener noreferrer"
+        class="text-grey text-sm px-3 py-1 shadow rounded border border-grey font-nunito font-bold tracking-wide lg:hover:bg-grey lg:hover:text-blackier block w-48 mx-auto mt-8"
+      >
+        DOWNLOAD RESUME
+      </a>
     </div>
     <!-- end contact -->
   </div>
