@@ -242,23 +242,24 @@ export default {
     };
   },
   metaInfo: {
-    title: "Abd Dzuljalali Wal Ikram | Portfolio",
-    // override the parent template and just use the above title only
-    titleTemplate: null,
+    // HTML Meta Tags
+    title: "Abd Dzuljalali Wal Ikram - Frontend Developer Portfolio",
+    titleTemplate: "Abd Dzuljalali Wal Ikram - Frontend Developer Portfolio",
     meta: [
       {
         name: "description",
         content:
-          "Hello! My name is Abd. Dzuljalali Wal Ikram. I'm a Frontend Developer (especially Vue.js) based in Makassar, Indonesia. With more than 1 year professional experience in website development, I have acquired the skills necessary to build great and premium websites. Maybe I don't need an inspirational quote, I just need a coffee.",
+          "Hello! My name is Abd. Dzuljalali Wal Ikram. I'm a Frontend Developer (especially Vue.js) based in Makassar, Indonesia. With more than 1 year professional experience in website development, I have acquired the skills necessary to build great and premium websites.",
       },
+      // Facebook Meta Tags
       {
         property: "og:title",
-        content: "Abd Dzuljalali Wal Ikram - Portfolio",
+        content: "Abd Dzuljalali Wal Ikram - Frontend Developer Portfolio",
       },
       {
         property: "og:description",
         content:
-          "Hello! My name is Abd. Dzuljalali Wal Ikram. I'm a Frontend Developer (especially Vue.js) based in Makassar, Indonesia. With more than 1 year professional experience in website development, I have acquired the skills necessary to build great and premium websites. Maybe I don't need an inspirational quote, I just need a coffee.",
+          "Hello! My name is Abd. Dzuljalali Wal Ikram. I'm a Frontend Developer (especially Vue.js) based in Makassar, Indonesia. With more than 1 year professional experience in website development, I have acquired the skills necessary to build great and premium websites.",
       },
       {
         property: "og:url",
@@ -272,13 +273,31 @@ export default {
         property: "og:image",
         content: "https://kalamangna.github.io/abed.png",
       },
+      // Twitter Meta Tags
       {
         name: "twitter:card",
-        content: "summary",
+        content: "summary_large_image",
       },
       {
-        name: "twitter:site",
-        content: "@kalamangna",
+        property: "twitter:domain",
+        content: "kalamangna.github.io",
+      },
+      {
+        property: "twitter:url",
+        content: "https://kalamangna.github.io",
+      },
+      {
+        name: "twitter:title",
+        content: "Abd Dzuljalali Wal Ikram - Frontend Developer Portfolio",
+      },
+      {
+        name: "twitter:description",
+        content:
+          "Hello! My name is Abd. Dzuljalali Wal Ikram. I'm a Frontend Developer (especially Vue.js) based in Makassar, Indonesia. With more than 1 year professional experience in website development, I have acquired the skills necessary to build great and premium websites.",
+      },
+      {
+        name: "twitter:image",
+        content: "https://kalamangna.github.io/abed.png",
       },
       {
         name: "twitter:creator",
