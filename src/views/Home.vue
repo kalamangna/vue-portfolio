@@ -264,6 +264,27 @@ export default {
         property: "og:image",
         content: "https://kalamangna.github.io/abed.jpg",
       },
+      {
+        property: "twitter:card",
+        content: "summary_large_image",
+      },
+      {
+        property: "twitter:url",
+        content: "https://kalamangna.github.io/",
+      },
+      {
+        property: "twitter:title",
+        content: "Abd Dzuljalali Wal Ikram | Portfolio",
+      },
+      {
+        property: "twitter:description",
+        content:
+          "Hello! My name is Abd. Dzuljalali Wal Ikram. I'm a Frontend Developer (especially Vue.js) based in Makassar, Indonesia. With more than 1 year professional experience in website development, I have acquired the skills necessary to build great and premium websites. Maybe I don't need an inspirational quote, I just need a coffee.",
+      },
+      {
+        property: "twitter:image",
+        content: "https://kalamangna.github.io/abed.jpg",
+      },
     ],
   },
 };
