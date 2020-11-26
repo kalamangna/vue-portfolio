@@ -8,4 +8,5 @@ module.exports = {
       onlyProduction: true,
     },
   },
+  publicPath: "/",
 };
