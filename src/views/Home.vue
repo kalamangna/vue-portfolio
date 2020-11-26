@@ -221,19 +221,18 @@ export default {
       ],
       works: [
         {
-          img: require("@/assets/img/travling.png"),
+          img: require("@/assets/img/travling.jpg"),
           title: "Travling Landing Page",
           detail: "Nuxt.js + Vuetify",
           link: "https://travling.id",
         },
         {
-          img: require("@/assets/img/ekspose.png"),
+          img: require("@/assets/img/ekspose.jpg"),
           title: "Ekspose Sulsel News",
           detail: "Nuxt.js + Vuetify",
           link: "https://ekspose-sulsel.herokuapp.com",
         },
         {
-          img: require("@/assets/img/travling.png"),
           title: "Portfolio Website",
           detail: "Vue.js + Tailwind CSS",
           link: "https://kalamangna.github.io",
