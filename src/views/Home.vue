@@ -228,7 +228,7 @@ export default {
           img: require("@/assets/img/travling.png"),
           title: "Portfolio Website",
           detail: "Vue.js + Tailwind CSS",
-          link: "https://kalamangna.000webhostapp.com",
+          link: "https://kalamangna.github.io",
         },
       ],
     };
