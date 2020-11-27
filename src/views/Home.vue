@@ -75,6 +75,7 @@
         fill="currentColor"
         class="h-10 mx-auto animate-bounce cursor-pointer"
         v-scroll-to="{ el: '#works', offset: -50 }"
+        @click="scrollButton"
       >
         <path
           fill-rule="evenodd"
@@ -122,6 +123,7 @@
             target="_blank"
             rel="noopener noreferrer"
             class="text-grey text-sm px-3 py-1 shadow rounded border border-grey font-nunito font-bold tracking-wide lg:hover:bg-grey lg:hover:text-blackier"
+            @click="seeLiveButton"
           >
             SEE LIVE
           </a>
@@ -147,6 +149,7 @@
           target="_blank"
           rel="noopener noreferrer"
           class="hover:text-greier flex justify-center items-center py-2"
+          @click="contactButton"
         >
           <img :src="contact.icon" alt="contact" class="w-6 h-6 mr-3" />
           {{ contact.text }}
@@ -157,6 +160,7 @@
         download
         rel="noopener noreferrer"
         class="text-grey text-sm px-3 py-1 shadow rounded border border-grey font-nunito font-bold tracking-wide lg:hover:bg-grey lg:hover:text-blackier block w-48 mx-auto mt-8"
+        @click="downloadButton"
       >
         DOWNLOAD RESUME
       </a>
@@ -303,6 +307,36 @@ export default {
         content: "@kalamangna",
       },
     ],
+  },
+  methods: {
+    scrollButton() {
+      this.$gtag.event("go-to-clicked", {
+        event_category: "Button",
+        event_label: "Go To",
+        value: 1,
+      });
+    },
+    seeLiveButton() {
+      this.$gtag.event("see-live-clicked", {
+        event_category: "Link",
+        event_label: "See Live",
+        value: 1,
+      });
+    },
+    contactButton() {
+      this.$gtag.event("contact-clicked", {
+        event_category: "Link",
+        event_label: "Contact Link",
+        value: 1,
+      });
+    },
+    downloadButton() {
+      this.$gtag.event("downloaded", {
+        event_category: "Download",
+        event_label: "Resume Download",
+        value: 1,
+      });
+    },
   },
 };
 </script>

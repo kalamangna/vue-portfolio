@@ -3,6 +3,15 @@ import App from "./App.vue";
 import "../src/assets/styles/tailwind.css";
 import router from "./router";
 import VueScrollTo from "vue-scrollto";
+import VueGtag from "vue-gtag";
+
+Vue.use(
+  VueGtag,
+  {
+    config: { id: "G-9DXQMTSHK8" },
+  },
+  router
+);
 
 Vue.use(VueScrollTo);
 

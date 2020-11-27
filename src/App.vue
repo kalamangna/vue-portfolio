@@ -11,6 +11,7 @@
         <button
           class="px-3 py-1 text-grey border border-grey text-sm rounded font-bold lg:hover:bg-grey lg:hover:text-blacky focus:outline-none tracking-wide"
           v-scroll-to="'#contact'"
+          @click="hireMeButton"
         >
           HIRE ME
         </button>
@@ -29,6 +30,7 @@
         target="_blank"
         rel="noopener noreferrer"
         class="text-sm font-semibold"
+        @click="githubButton"
       >
         &copy; 2020 - github.com/kalamangna
       </a>
@@ -36,3 +38,24 @@
     <!-- end footer -->
   </div>
 </template>
+
+<script>
+export default {
+  methods: {
+    hireMeButton() {
+      this.$gtag.event("hire-me-clicked", {
+        event_category: "Button",
+        event_label: "Hire Me",
+        value: 1,
+      });
+    },
+    githubButton() {
+      this.$gtag.event("github-clicked", {
+        event_category: "Link",
+        event_label: "Github Link",
+        value: 1,
+      });
+    },
+  },
+};
+</script>
