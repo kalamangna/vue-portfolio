@@ -17,9 +17,9 @@
       <div class="bg-blacky mt-10 md:mt-20 p-5 md:p-10 rounded shadow lg:flex">
         <!-- about -->
         <div class="lg:w-1/2">
-          <h1 class="font-nunito font-bold text-3xl tracking-wide">
+          <h2 class="font-nunito font-bold text-3xl tracking-wide">
             About
-          </h1>
+          </h2>
           <hr class="w-10 mt-3 mb-6" />
           <p class="lg:pr-14">
             My name is
@@ -35,9 +35,9 @@
 
         <!-- skills -->
         <div class="lg:w-1/2 mt-8 lg:mt-0">
-          <h1 class="font-nunito font-bold text-3xl tracking-wide">
+          <h2 class="font-nunito font-bold text-3xl tracking-wide">
             Skills
-          </h1>
+          </h2>
           <hr class="w-10 mt-3 mb-6" />
           <div class="flex">
             <div class="w-1/2">
@@ -91,11 +91,11 @@
       class="bg-blackier px-4 py-10 md:px-40 md:py-20 text-center"
       id="works"
     >
-      <h1 class="font-nunito font-bold text-3xl tracking-wide">
+      <h2 class="font-nunito font-bold text-3xl tracking-wide">
         Works
-      </h1>
+      </h2>
       <hr class="w-10 mt-3 mb-10 mx-auto" />
-      <div class="lg:flex lg:justify-between">
+      <div class="flex flex-wrap justify-between">
         <div
           v-for="(work, i) in works"
           :key="i"
@@ -115,7 +115,7 @@
               You are here
             </div>
           </div>
-          <h1 class="text-lg font-semibold mt-3">{{ work.title }}</h1>
+          <h3 class="text-lg font-semibold mt-3">{{ work.title }}</h3>
           <p class="mb-5">{{ work.detail }}</p>
           <a
             v-if="i < 2"
@@ -137,9 +137,9 @@
       class="bg-blacky px-4 py-10 md:px-40 md:py-20 text-center"
       id="contact"
     >
-      <h1 class="font-nunito font-bold text-3xl tracking-wide">
+      <h2 class="font-nunito font-bold text-3xl tracking-wide">
         Contact
-      </h1>
+      </h2>
       <hr class="w-10 mt-3 mb-10 mx-auto" />
       <div class="inline-block">
         <a
@@ -160,7 +160,6 @@
         download
         rel="noopener noreferrer"
         class="text-grey text-sm px-3 py-1 shadow rounded border border-grey font-nunito font-bold tracking-wide lg:hover:bg-grey lg:hover:text-blackier block w-48 mx-auto mt-8"
-        @click="downloadButton"
       >
         DOWNLOAD RESUME
       </a>
@@ -327,13 +326,6 @@ export default {
       this.$gtag.event("contact-clicked", {
         event_category: "Link",
         event_label: "Contact Link",
-        value: 1,
-      });
-    },
-    downloadButton() {
-      this.$gtag.event("downloaded", {
-        event_category: "Download",
-        event_label: "Resume Download",
         value: 1,
       });
     },
