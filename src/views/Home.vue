@@ -232,7 +232,7 @@ export default {
         {
           img: require("@/assets/img/ekspose.jpg"),
           title: "Ekspose Sulsel News",
-          detail: "Nuxt.js + Vuetify",
+          detail: "Wordpress API + Nuxt.js + Tailwind CSS",
           link: "https://ekspose-sulsel.herokuapp.com",
         },
         {
