@@ -24,15 +24,16 @@
     </main>
 
     <!-- footer -->
-    <footer class="bg-blackier p-4 text-grey">
+    <footer class="bg-blackier p-4 text-grey text-sm font-semibold">
+      &copy; 2020 -
       <a
         href="https://github.com/kalamangna"
         target="_blank"
         rel="noopener noreferrer"
-        class="text-sm font-semibold"
+        class="hover:underline"
         @click="githubButton"
       >
-        &copy; 2020 - github.com/kalamangna
+        github.com/kalamangna
       </a>
     </footer>
     <!-- end footer -->

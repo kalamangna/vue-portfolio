@@ -24,11 +24,11 @@
           <p class="lg:pr-14">
             My name is
             <span class="font-bold">Abd Dzuljalali Wal Ikram.</span> I'm a
-            Frontend Developer (especially Vue.js) based in Makassar, Indonesia.
-            With more than 1 year professional experience in website
-            development, I have acquired the skills necessary to build great and
-            premium websites. Maybe I don't need an inspirational quote, I just
-            need a coffee.
+            Frontend Developer (especially Vue, but already start to use React)
+            based in Makassar, Indonesia. With more than 1 year professional
+            experience in website development, I have acquired the skills
+            necessary to build great and premium websites. Maybe I don't need an
+            inspirational quote, just buy me a coffee!
           </p>
         </div>
         <!-- end about -->
@@ -43,7 +43,7 @@
             <div class="w-1/2">
               <div
                 class="flex items-center pb-1 last:pb-0"
-                v-for="skill in skills.slice(0, 5)"
+                v-for="skill in skills.slice(0, 6)"
                 :key="skill.text"
               >
                 <div class="w-2 h-2 mr-3 rounded bg-grey"></div>
@@ -53,7 +53,7 @@
             <div class="w-1/2">
               <div
                 class="flex items-center pb-1 last:pb-0"
-                v-for="skill in skills.slice(5, 10)"
+                v-for="skill in skills.slice(6, 12)"
                 :key="skill.text"
               >
                 <div class="w-2 h-2 mr-3 rounded bg-grey"></div>
@@ -148,7 +148,7 @@
           :href="contact.link"
           target="_blank"
           rel="noopener noreferrer"
-          class="hover:text-greier flex justify-center items-center py-2"
+          class="hover:underline flex justify-center items-center py-2"
           @click="contactButton"
         >
           <img :src="contact.icon" alt="contact" class="w-6 h-6 mr-3" />
@@ -181,6 +181,9 @@ export default {
           text: "Nuxt.js",
         },
         {
+          text: "React.js",
+        },
+        {
           text: "HTML",
         },
         {
@@ -203,6 +206,9 @@ export default {
         },
         {
           text: "Tailwind CSS",
+        },
+        {
+          text: "Material UI",
         },
       ],
       contacts: [
