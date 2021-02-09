@@ -21,14 +21,14 @@
             About
           </h2>
           <hr class="w-10 mt-3 mb-6" />
-          <p class="lg:pr-14">
+          <p class="lg:pr-10">
             My name is
             <span class="font-bold">Abd Dzuljalali Wal Ikram.</span> I'm a
-            Frontend Developer (especially Vue, but already start to use React)
-            based in Makassar, Indonesia. With more than 1 year professional
-            experience in website development, I have acquired the skills
-            necessary to build great and premium websites. Maybe I don't need an
-            inspirational quote, just buy me a coffee!
+            detail oriented Frontend Developer based in South Sulawesi,
+            Indonesia. With more than 1 year professional experience in website
+            development, I have acquired the skills necessary to build great
+            websites. Maybe I don't need an inspirational quote, just buy me a
+            coffee!
           </p>
         </div>
         <!-- end about -->
@@ -156,7 +156,7 @@
         </a>
       </div>
       <a
-        href="https://kalamangna.github.io/Resume - Abd. Dzuljalali Wal Ikram.pdf"
+        href="Resume - Abd. Dzuljalali Wal Ikram.pdf"
         download
         rel="noopener noreferrer"
         class="text-grey text-sm px-3 py-1 shadow rounded border border-grey font-nunito font-bold tracking-wide lg:hover:bg-grey lg:hover:text-blackier block w-48 mx-auto mt-8"
