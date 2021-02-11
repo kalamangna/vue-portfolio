@@ -156,7 +156,7 @@
         </a>
       </div>
       <a
-        href="Resume - Abd. Dzuljalali Wal Ikram.pdf"
+        href="Resume - Abd Dzuljalali Wal Ikram.pdf"
         download
         rel="noopener noreferrer"
         class="text-grey text-sm px-3 py-1 shadow rounded border border-grey font-nunito font-bold tracking-wide lg:hover:bg-grey lg:hover:text-blackier block w-48 mx-auto mt-8"
