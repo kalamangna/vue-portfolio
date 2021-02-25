@@ -1,22 +1,39 @@
 <template>
-  <div class="text-grey" style="padding-top: 62px">
-    <div class="bg-blackier px-4 py-10 md:px-40 md:py-20">
-      <!-- banner -->
-      <div class="font-nunito">
-        <h1 class="text-5xl font-bold mb-2 tracking-wide">
-          Hello.
+  <div class="container">
+    <section class="lg:flex py-10 items-center">
+      <div class="lg:w-1/2">
+        <h1 class="text-4xl font-bold mb-4">
+          Abd Dzuljalali Wal Ikram
         </h1>
-        <div class="flex items-center">
-          <hr class="w-10 mr-5" />
-          <p class="text-2xl tracking-wide">I'm Abed.</p>
-        </div>
+        <p class="pr-24 mb-10">
+          Hello. You can call me
+          <span class="font-semibold">Abed.</span>
+          I'm a detail oriented Frontend Developer based in South Sulawesi,
+          Indonesia. With more than 1 year professional experience in website
+          development, I have acquired the skills necessary to build great
+          websites. Maybe I don't need an inspirational quote, just buy me a
+          coffee!
+        </p>
+        <a
+          href="Resume - Abd Dzuljalali Wal Ikram.pdf"
+          download
+          rel="noopener noreferrer"
+          class="px-5 py-3 bg-primary lg:hover:bg-secondary text-white text-sm rounded-full font-semibold focus:outline-none"
+        >
+          DOWNLOAD RESUME
+        </a>
       </div>
-      <!-- end banner -->
+      <div class="lg:w-1/2">
+        <img src="@/assets/img/programmer.svg" alt="freelancer" />
+      </div>
+    </section>
 
-      <!-- card -->
-      <div class="bg-blacky mt-10 md:mt-20 p-5 md:p-10 rounded shadow lg:flex">
-        <!-- about -->
-        <div class="lg:w-1/2">
+    <!-- end banner -->
+
+    <!-- card -->
+    <!-- <div class="bg-blacky mt-10 md:mt-20 p-5 md:p-10 rounded shadow lg:flex"> -->
+    <!-- about -->
+    <!-- <div class="lg:w-1/2">
           <h2 class="font-nunito font-bold text-3xl tracking-wide">
             About
           </h2>
@@ -30,11 +47,11 @@
             websites. Maybe I don't need an inspirational quote, just buy me a
             coffee!
           </p>
-        </div>
-        <!-- end about -->
+        </div> -->
+    <!-- end about -->
 
-        <!-- skills -->
-        <div class="lg:w-1/2 mt-8 lg:mt-0">
+    <!-- skills -->
+    <!-- <div class="lg:w-1/2 mt-8 lg:mt-0">
           <h2 class="font-nunito font-bold text-3xl tracking-wide">
             Skills
           </h2>
@@ -61,14 +78,14 @@
               </div>
             </div>
           </div>
-        </div>
-        <!-- end skills -->
-      </div>
-    </div>
+        </div> -->
+    <!-- end skills -->
+    <!-- </div> -->
+    <!-- </div> -->
     <!-- end card -->
 
     <!-- goto button -->
-    <div class="h-10 bg-blackier">
+    <!-- <div class="h-10 bg-blackier">
       <svg
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 20 20"
@@ -83,11 +100,11 @@
           clip-rule="evenodd"
         />
       </svg>
-    </div>
+    </div> -->
     <!-- end goto button -->
 
     <!-- works -->
-    <div
+    <!-- <div
       class="bg-blackier px-4 py-10 md:px-40 md:py-20 text-center"
       id="works"
     >
@@ -129,11 +146,11 @@
           </a>
         </div>
       </div>
-    </div>
+    </div> -->
     <!-- end works -->
 
     <!-- contact -->
-    <div
+    <!-- <div
       class="bg-blacky px-4 py-10 md:px-40 md:py-20 text-center"
       id="contact"
     >
@@ -163,7 +180,7 @@
       >
         DOWNLOAD RESUME
       </a>
-    </div>
+    </div> -->
     <!-- end contact -->
   </div>
 </template>

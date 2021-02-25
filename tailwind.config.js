@@ -2,15 +2,11 @@ module.exports = {
   purge: ["./public/**/*.html", "./src/**/*.vue"],
   darkMode: false, // or 'media' or 'class'
   theme: {
-    fontFamily: {
-      nunito: ["Nunito", "sans-serif"],
-    },
     extend: {
       colors: {
-        blackier: "#141414",
-        blacky: "#1B1B1B",
-        grey: "#F3F3F3",
-        greier: "#E1E1E1",
+        primary: "#14213D",
+        secondary: "#FCA311",
+        tersiary: "#E5E5E5",
       },
     },
   },
