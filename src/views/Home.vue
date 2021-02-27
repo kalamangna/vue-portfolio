@@ -1,34 +1,75 @@
 <template>
-  <div class="container">
-    <section class="lg:flex py-10 items-center">
-      <div class="lg:w-1/2">
-        <h1 class="text-4xl font-bold mb-4">
-          Abd Dzuljalali Wal Ikram
-        </h1>
-        <p class="pr-24 mb-10">
-          Hello. You can call me
-          <span class="font-semibold">Abed.</span>
-          I'm a detail oriented Frontend Developer based in South Sulawesi,
-          Indonesia. With more than 1 year professional experience in website
-          development, I have acquired the skills necessary to build great
-          websites. Maybe I don't need an inspirational quote, just buy me a
-          coffee!
-        </p>
-        <a
-          href="Resume - Abd Dzuljalali Wal Ikram.pdf"
-          download
-          rel="noopener noreferrer"
-          class="px-5 py-3 bg-primary lg:hover:bg-secondary text-white text-sm rounded-full font-semibold focus:outline-none"
-        >
-          DOWNLOAD RESUME
-        </a>
-      </div>
-      <div class="lg:w-1/2">
-        <img src="@/assets/img/programmer.svg" alt="freelancer" />
+  <div>
+    <section class="px-4 py-10 md:px-40 md:py-16">
+      <div class="grid lg:grid-cols-2 gap-20 items-center">
+        <div class="text-center lg:text-left">
+          <h1 class="text-2xl lg:text-4xl font-bold mb-4">
+            Abd Dzuljalali Wal Ikram
+          </h1>
+
+          <p class="mb-10">
+            Hello. You can call me
+            <span class="font-semibold">Abed.</span>
+            I'm a detail oriented Frontend Developer based in South Sulawesi,
+            Indonesia. With more than 1 year professional experience in website
+            development, I have acquired the skills necessary to build great
+            websites. Maybe I don't need an inspirational quote, just buy me a
+            coffee!
+          </p>
+
+          <div class="py-3">
+            <a
+              href="Resume - Abd Dzuljalali Wal Ikram.pdf"
+              download
+              rel="noopener noreferrer"
+              class="px-5 py-3 bg-primary lg:hover:bg-secondary text-white text-sm rounded-full font-semibold focus:outline-none"
+            >
+              DOWNLOAD RESUME
+            </a>
+          </div>
+        </div>
+        <div>
+          <img
+            src="@/assets/img/freelancer.svg"
+            alt="freelancer"
+            class="w-3/4 lg:w-full mx-auto"
+          />
+        </div>
       </div>
     </section>
 
-    <!-- end banner -->
+    <section class="px-4 py-10 md:px-40 md:py-16">
+      <div class="grid lg:grid-cols-3 gap-20 items-center">
+        <div>
+          <img
+            src="@/assets/img/developer.svg"
+            alt="developer"
+            class="w-3/4 mx-auto lg:w-full"
+          />
+        </div>
+        <div class="lg:col-span-2">
+          <div class="text-center lg:text-left">
+            <h3 class="text-2xl font-semibold mb-2">
+              Specializing in
+            </h3>
+
+            <p class="mb-10 font-medium">
+              Frontend Website Development
+            </p>
+          </div>
+
+          <div class="grid grid-cols-2 lg:grid-cols-4 gap-4 items-center">
+            <ul
+              v-for="skill in skills"
+              :key="skill.text"
+              class="list-disc list-inside text-center lg:text-left"
+            >
+              <li>{{ skill.text }}</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
 
     <!-- card -->
     <!-- <div class="bg-blacky mt-10 md:mt-20 p-5 md:p-10 rounded shadow lg:flex"> -->

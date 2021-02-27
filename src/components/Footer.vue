@@ -1,11 +1,11 @@
 <template>
-  <footer class="container py-4 text-sm">
+  <footer class="p-4 md:px-40 text-sm bg-primary text-white">
     &copy; 2020 -
     <a
       href="https://github.com/kalamangna"
       target="_blank"
       rel="noopener noreferrer"
-      class="hover:underline font-semibold"
+      class="lg:hover:underline font-semibold"
       @click="githubButton"
     >
       github.com/kalamangna
