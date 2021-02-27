@@ -1,14 +1,14 @@
 <template>
-  <header class="w-full">
-    <nav class="p-4 md:px-40 flex justify-between items-center">
-      <div class="font-bold cursor-pointer text-primary" v-scroll-to="'#app'">
+  <header>
+    <nav class="container p-4 md:px-20 flex justify-between items-center">
+      <div class="font-bold cursor-pointer" v-scroll-to="'#app'">
         ABED
       </div>
       <div>
-        <!-- v-scroll-to="'#contact'" -->
         <button
-          class="px-5 py-3 bg-primary lg:hover:bg-secondary text-white text-sm rounded-full font-semibold focus:outline-none"
+          class="px-5 py-3 bg-black lg:hover:bg-primary text-white text-sm rounded-full font-semibold focus:outline-none"
           @click="hireMeButton"
+          v-scroll-to="'#contact'"
         >
           CONTACT ME
         </button>
