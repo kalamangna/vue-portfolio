@@ -53,7 +53,7 @@
         </div>
         <div class="lg:col-span-2">
           <div class="text-center lg:text-left">
-            <h3 class="text-2xl font-semibold mb-2">
+            <h3 class="text-2xl font-bold mb-2">
               Specializing in
             </h3>
 
@@ -62,14 +62,20 @@
             </p>
           </div>
 
-          <div class="grid grid-cols-2 lg:grid-cols-4 gap-4 items-center">
-            <ul
-              v-for="skill in skills"
+          <div
+            class="grid grid-cols-2 md:grid-cols-3 items-center gap-4 md:gap-y-6"
+          >
+            <div
+              v-for="(skill, i) in skills"
               :key="skill.text"
-              class="list-disc list-inside text-center lg:text-left"
+              :class="
+                i % 2 === 0
+                  ? `text-center border border-black p-2 lg:hover:bg-primary lg:hover:text-white lg:hover:border-0 rounded-2xl`
+                  : `text-center border border-black p-2 lg:hover:bg-primary lg:hover:text-white lg:hover:border-0 rounded-2xl md:w-3/4 md:mx-auto`
+              "
             >
-              <li>{{ skill.text }}</li>
-            </ul>
+              <p>{{ skill.text }}</p>
+            </div>
           </div>
         </div>
       </div>
@@ -77,7 +83,7 @@
 
     <section class="bg-gray-50">
       <div class="container px-4 md:px-20 py-10 md:py-16 text-center">
-        <h3 class="text-2xl font-semibold mb-2">
+        <h3 class="text-2xl font-bold mb-2">
           Works
         </h3>
 
@@ -100,7 +106,7 @@
               </div>
             </div>
 
-            <p class="font-semibold mt-6">{{ work.title }}</p>
+            <p class="font-semibold mt-6 mb-1">{{ work.title }}</p>
             <p class="text-sm mb-5">{{ work.detail }}</p>
             <div class="py-3">
               <a
@@ -122,7 +128,7 @@
     <section class="bg-gray-100" id="contact">
       <div class="container px-4 md:px-20 py-10 md:py-16">
         <div class="shadow-xl p-10 rounded-2xl text-center bg-white">
-          <h3 class="text-2xl font-semibold mb-10">
+          <h3 class="text-2xl font-bold mb-10">
             Get In Touch
           </h3>
 
@@ -178,10 +184,10 @@ export default {
           text: "SCSS",
         },
         {
-          text: "Javascript",
+          text: "Responsive Web",
         },
         {
-          text: "Responsive Web",
+          text: "Javascript",
         },
         {
           text: "Bootstrap",
@@ -209,7 +215,7 @@ export default {
         },
         {
           icon: require("@/assets/icon/linkedin.svg"),
-          text: "linkedin.com/in/kalamangna",
+          text: "Abd Dzuljalali Wal Ikram",
           link: "https://linkedin.com/in/kalamangna",
         },
       ],
