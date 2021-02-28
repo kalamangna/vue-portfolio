@@ -4,7 +4,7 @@
     <Header />
 
     <!-- content -->
-    <main>
+    <main style="padding-top: 76px">
       <router-view />
     </main>
 

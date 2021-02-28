@@ -1,5 +1,11 @@
 <template>
-  <header>
+  <header
+    :class="
+      isScroll
+        ? `fixed w-full bg-gray-50 shadow-lg transition ease-out duration-1000`
+        : `fixed w-full bg-gray-50 transition ease-in`
+    "
+  >
     <nav class="container p-4 md:px-20 flex justify-between items-center">
       <div class="font-bold cursor-pointer" v-scroll-to="'#app'">
         ABED
@@ -19,7 +25,21 @@
 
 <script>
 export default {
+  data() {
+    return {
+      isScroll: false,
+    };
+  },
+  created() {
+    window.addEventListener("scroll", this.handleScroll);
+  },
+  destroyed() {
+    window.removeEventListener("scroll", this.handleScroll);
+  },
   methods: {
+    handleScroll() {
+      this.isScroll = window.scrollY ? true : false;
+    },
     hireMeButton() {
       this.$gtag.event("hire-me-clicked", {
         event_category: "Button",

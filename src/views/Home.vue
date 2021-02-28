@@ -62,19 +62,17 @@
             </p>
           </div>
 
-          <div
-            class="grid grid-cols-2 md:grid-cols-3 items-center gap-4 md:gap-y-6"
-          >
+          <div class="grid grid-cols-3 items-center gap-4 md:gap-y-6">
             <div
               v-for="(skill, i) in skills"
               :key="skill.text"
               :class="
                 i % 2 === 0
-                  ? `text-center border border-black p-2 lg:hover:bg-primary lg:hover:text-white lg:hover:border-0 rounded-2xl`
-                  : `text-center border border-black p-2 lg:hover:bg-primary lg:hover:text-white lg:hover:border-0 rounded-2xl md:w-3/4 md:mx-auto`
+                  ? `text-center border border-black p-2 lg:hover:bg-primary lg:hover:text-white lg:hover:border-0 rounded-full`
+                  : `text-center border border-black p-2 lg:hover:bg-primary lg:hover:text-white lg:hover:border-0 rounded-full w-5/6 mx-auto`
               "
             >
-              <p>{{ skill.text }}</p>
+              <p class="text-xs md:text-base">{{ skill.text }}</p>
             </div>
           </div>
         </div>
@@ -93,15 +91,20 @@
 
         <div class="grid lg:grid-cols-3 gap-12">
           <div v-for="(work, i) in works" :key="i">
-            <div class="shadow-xl rounded-2xl hover:shadow-2xl overflow-hidden">
+            <div
+              class="rounded-2xl overflow-hidden border border-gray-200 h-80 w-full lg:w-80 hover:border-0 hover:shadow-xl"
+            >
               <div v-if="i < 2">
                 <img
                   :src="work.img"
                   alt="portfolio"
-                  class="h-80 w-full object-contain object-top"
+                  class="w-full h-full object-contain object-top"
                 />
               </div>
-              <div v-else class="h-80 flex justify-center items-center">
+              <div
+                v-else
+                class="w-full h-full flex justify-center items-center"
+              >
                 <p class="font-medium">You are here</p>
               </div>
             </div>
@@ -143,7 +146,7 @@
                 :href="contact.link"
                 target="_blank"
                 rel="noopener noreferrer"
-                class="hover:underline col-span-5"
+                class="lg:hover:underline col-span-5"
                 @click="contactButton"
               >
                 <p>
@@ -163,7 +166,8 @@ export default {
   name: "Home",
   data() {
     return {
-      about: `Hello. You can call me Abed. I'm a detail oriented Frontend Developer based in South Sulawesi, Indonesia. With more than 1 year professional experience in website development, I have acquired the skills necessary to build great websites. Maybe I don't need an inspirational quote, just buy me a coffee!`,
+      title: "Abd Dzuljalali Wal Ikram - Frontend Developer",
+      about: `You can call me Abed. I'm a detail oriented Frontend Developer based in South Sulawesi, Indonesia.`,
       skills: [
         {
           text: "Vue.js",
@@ -196,10 +200,10 @@ export default {
           text: "Vuetify",
         },
         {
-          text: "Tailwind CSS",
+          text: "Material UI",
         },
         {
-          text: "Material UI",
+          text: "Tailwind CSS",
         },
       ],
       contacts: [
@@ -241,11 +245,12 @@ export default {
     };
   },
   metaInfo() {
+    let title = this.title;
     let about = this.about;
     return {
       // HTML Meta Tags
-      title: "Abd Dzuljalali Wal Ikram - Frontend Developer",
-      titleTemplate: "Abd Dzuljalali Wal Ikram - Frontend Developer",
+      title: title,
+      titleTemplate: title,
       meta: [
         {
           name: "description",
@@ -254,7 +259,7 @@ export default {
         // Facebook Meta Tags
         {
           property: "og:title",
-          content: "Abd Dzuljalali Wal Ikram - Frontend Developer",
+          content: title,
         },
         {
           property: "og:description",
@@ -287,7 +292,7 @@ export default {
         },
         {
           name: "twitter:title",
-          content: "Abd Dzuljalali Wal Ikram - Frontend Developer",
+          content: title,
         },
         {
           name: "twitter:description",
