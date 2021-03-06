@@ -2,7 +2,7 @@
   <div>
     <section class="bg-gray-50">
       <div
-        class="container px-4 md:px-20 py-10 md:py-16 grid lg:grid-cols-2 gap-20 items-center"
+        class="container px-4 md:px-20 py-10 md:py-32 grid lg:grid-cols-2 gap-20 items-center"
       >
         <div class="text-center lg:text-left">
           <h1 class="text-2xl lg:text-4xl font-bold mb-4">

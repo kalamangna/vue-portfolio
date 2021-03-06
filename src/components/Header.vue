@@ -2,8 +2,8 @@
   <header
     :class="
       isScroll
-        ? `fixed w-full bg-gray-50 shadow-lg transition ease-out duration-1000`
-        : `fixed w-full bg-gray-50 transition ease-in`
+        ? `fixed w-full bg-gray-50 shadow-lg transition ease-out duration-1000 z-50`
+        : `fixed w-full bg-gray-50 transition ease-in z-50`
     "
   >
     <nav class="container p-4 md:px-20 flex justify-between items-center">
