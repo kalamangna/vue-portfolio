@@ -12,11 +12,7 @@
           <p class="mb-10">
             Hello. You can call me
             <span class="font-semibold">Abed.</span>
-            I'm a detail oriented Frontend Developer based in South Sulawesi,
-            Indonesia. With more than 1 year professional experience in website
-            development, I have acquired the skills necessary to build great
-            websites. Maybe I don't need an inspirational quote, just buy me a
-            coffee!
+            I'm a Frontend Developer based in South Sulawesi, Indonesia. For the past two years, I have professional experience in the IT industry, mainly website development. Currently, I work using Javascript frameworks, such as Vue and React. Maybe I don't need an inspirational quote, just buy me a coffee!
           </p>
 
           <div class="py-3">
